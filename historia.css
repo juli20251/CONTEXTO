@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf9f5;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #2d2d2d, #4d4d4d);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    font-style: italic;
+    color: #ddd;
+  }
+  
+  .contenido {
+    padding: 40px 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .bloque {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .bloque.invertido {
+    flex-direction: row-reverse;
+  }
+  
+  .texto {
+    flex: 1;
+  }
+  
+  .texto h2 {
+    font-size: 28px;
+    color: #b84d4d;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .texto h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #b84d4d;
+    margin-top: 5px;
+  }
+  
+  .imagen {
+    flex: 1;
+    background-color: #eee;
+    border-radius: 12px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .navbar .nav-links a:hover {
+    color: #f4a261;
+}
+  .espacio-foto::before {
+    content: "📷 Espacio para foto";
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .footer {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .navbar {
+    background-color: #000;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }  
