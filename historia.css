@@ -1,136 +1,195 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdf9f5;
-    color: #333;
-    line-height: 1.7;
-  }
-  
-  .hero {
-    background: linear-gradient(to right, #2d2d2d, #4d4d4d);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    animation: fadeInDown 1s ease-in-out;
-  }
-  
-  .hero p {
-    font-size: 20px;
-    font-style: italic;
-    color: #ddd;
-  }
-  
-  .contenido {
-    padding: 40px 30px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .bloque {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 60px;
-    flex-wrap: wrap;
-  }
-  
-  .bloque.invertido {
-    flex-direction: row-reverse;
-  }
-  
-  .texto {
-    flex: 1;
-  }
-  
-  .texto h2 {
-    font-size: 28px;
-    color: #b84d4d;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  
-  .texto h2::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #b84d4d;
-    margin-top: 5px;
-  }
-  
-  .imagen {
-    flex: 1;
-    background-color: #eee;
-    border-radius: 12px;
-    min-height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .imagen img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .navbar .nav-links a:hover {
-    color: #f4a261;
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --color-principal: #8b4513; /* Marrón cálido */
+  --color-secundario: #f8f4e3; /* Crema suave */
+  --color-acento: #e7be36; /* Rojo vibrante */
+  --color-texto: #333333;
+  --color-claro: #ffffff;
 }
-  .espacio-foto::before {
-    content: "📷 Espacio para foto";
-    color: #aaa;
-    font-style: italic;
-  }
-  
-  .footer {
-    background-color: #f2f2f2;
-    color: #333;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    margin-top: 40px;
-  }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-texto);
+  line-height: 1.6;
+  background-color: var(--color-secundario);
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #000000; /* Cambio a fondo negro como en la imagen */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-claro);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--color-claro);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.nav-links a.active {
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.nav-links a:hover {
+  color: var(--color-acento);
+  transform: translateY(-2px);
+}
+
+/* Hero section */
+.hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/800') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-claro);
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* Contenido principal */
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.bloque.invertido {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1;
+}
+
+.texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-principal);
+  position: relative;
+}
+
+.texto h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-acento);
+}
+
+.texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.bloque img {
+  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  max-width: 500px;
+  height: auto;
+}
+
+.bloque img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .navbar {
-    background-color: #000;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
   }
   
   .logo {
-    font-weight: bold;
-    font-size: 22px;
+    margin-bottom: 1rem;
   }
   
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
   
-  .nav-links a:hover {
-    text-decoration: underline;
-  }  
+  .bloque, .bloque.invertido {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .texto h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,107 +1,247 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Estilos para el formulario de pedidos */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
     background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
 }
 
-.navbar {
-    background-color: #000;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 22px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }  
-
-.navbar .nav-links a:hover {
-    color: #f4a261;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Encabezado */
 header {
-    background-color: #f4a261;
+    background-color: #d32f2f;
     color: white;
-    padding: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Secciones del pedido */
+.order-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-selection h3, .order-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #d32f2f;
     text-align: center;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+/* Categorías del menú */
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #d32f2f;
+}
+
+/* Items del menú */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
     border-radius: 8px;
-    margin-top: 30px;
-}
-
-section h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-section p {
-    margin-bottom: 25px;
-    color: #666;
-}
-
-form {
+    padding: 15px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-label {
-    margin-top: 15px;
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-info {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.menu-item-name {
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #444;
+    margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="date"],
-select,
-textarea {
+.menu-item-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* Control de cantidad */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-input {
+    border: none;
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+/* Formulario de contacto */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-textarea {
-    resize: vertical;
+/* Resumen del pedido */
+#order-summary {
+    margin-bottom: 20px;
 }
 
-button {
-    margin-top: 25px;
-    padding: 12px;
-    background-color: #f4a261;
+.no-items-message {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+#order-items-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+}
+
+/* Opciones de pago */
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.payment-options .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-options input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Botón de envío */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #d32f2f;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #e76f51;
+.btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
 }

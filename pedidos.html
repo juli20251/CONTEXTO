@@ -3,58 +3,543 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacer Pedido</title>
+    <title>Hacer Pedido - Vivi y Lolo</title>
     <link rel="stylesheet" href="pedidos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">VIVI Y LOLO</div>
         <div class="nav-links">
             <a href="index.html">INICIO</a>
-            <a href="menu.html">MENÚ </a>
+            <a href="menu.html">MENÚ</a>
             <a href="historia.html">NUESTRA HISTORIA</a>
             <a href="sucursales.html">SUCURSALES</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="cvv.html">TRABAJA CON NOSOTROS</a>
-            <a href="pedidos.html">PEDIDOS ONLINE</a>
+            <a href="pedidos.html" class="active">PEDIDOS ONLINE</a>
+        </div>
+        <div class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </div>
     </nav>
 
     <header>
-        <h1>Haz tu Pedido</h1>
+        <h1>Realiza tu Pedido Online</h1>
     </header>
-    
-    <section>
-        <h2>¡Realiza tu pedido de manera fácil y rápida!</h2>
-        <p>Selecciona lo que te gustaría pedir, completa tus datos y nosotros nos encargamos del resto. ¡Disfruta de nuestros deliciosos platos!</p>
-    
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+    <div class="container">
+        <div class="intro">
+            <h2>¡Deliciosa comida directo a tu puerta!</h2>
+            <p>Selecciona tus platos favoritos, indícanos dónde entregártelos, y nosotros nos encargamos del resto. En pocos minutos disfrutarás de los mejores sabores de Vivi y Lolo en la comodidad de tu hogar.</p>
+        </div>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
+        <div class="success-message" id="successMessage">
+            ¡Tu pedido ha sido recibido con éxito! Pronto recibirás un correo electrónico con los detalles de tu pedido.
+        </div>
 
-            <label for="pedido">Que vas a querer pedir?</label>
-            <input type="ped" id="pedido" name="pedido" required>
-            </select>
+        <div class="error-message" id="errorMessage">
+            Ha ocurrido un error al procesar tu pedido. Por favor, intenta nuevamente.
+        </div>
 
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" required>
-
-            <label for="dia">Fecha de Entrega:</label>
-            <input type="date" id="dia" name="dia" required>
-
-            <label for="direccion">Dirección de Entrega:</label>
-            <textarea id="direccion" name="direccion" rows="4" required></textarea>
-
-            <button type="submit">Realizar Pedido</button>
+        <form id="orderForm">
+            <div class="order-section">
+                <div class="menu-selection">
+                    <h3>Selecciona tus productos</h3>
+                    
+                    <div class="menu-category">
+                        <h4>ENTRADAS</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="1" data-price="14000" data-name="PROVOLETA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">PROVOLETA</div>
+                                    <div class="menu-item-description">Queso provoleta a la parrilla</div>
+                                    <div class="menu-item-price">$14000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="2" data-price="8000" data-name="BASTONES DE MUZZA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">BASTONES DE MUZZA</div>
+                                    <div class="menu-item-description">Bastones de queso mozzarella rebozados</div>
+                                    <div class="menu-item-price">$8000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="3" data-price="15000" data-name="RABAS">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">RABAS</div>
+                                    <div class="menu-item-description">Aros de calamar rebozados y fritos</div>
+                                    <div class="menu-item-price">$15000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="4" data-price="16000" data-name="RABAS CON PROVENZAL">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">RABAS CON PROVENZAL</div>
+                                    <div class="menu-item-description">Aros de calamar rebozados y fritos con ajo y perejil</div>
+                                    <div class="menu-item-price">$16000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-category">
+                        <h4>PARRILLA</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="5" data-price="23000" data-name="PARRILLADA COMÚN">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">PARRILLADA COMÚN</div>
+                                    <div class="menu-item-description">CHORI, MORCI, CHINCHU, RIÑÓN Y ASADO</div>
+                                    <div class="menu-item-price">$23000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="6" data-price="26000" data-name="PARRILLADA ESPECIAL">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">PARRILLADA ESPECIAL</div>
+                                    <div class="menu-item-description">CHORI, MORCI, CHINCHU, RIÑÓN, ASADO, PECHITO Y POLLO</div>
+                                    <div class="menu-item-price">$26000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="7" data-price="18000" data-name="POLLO ENTERO">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">POLLO ENTERO</div>
+                                    <div class="menu-item-description">Pollo entero a la parrilla</div>
+                                    <div class="menu-item-price">$18000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="8" data-price="20000" data-name="POLLO ENTERO CON FRITAS">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">POLLO ENTERO CON FRITAS</div>
+                                    <div class="menu-item-description">Pollo entero a la parrilla acompañado con papas fritas</div>
+                                    <div class="menu-item-price">$20000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-category">
+                        <h4>PASTAS</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="9" data-price="9000" data-name="RAVIOLES CON FILETO">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">RAVIOLES CON FILETO</div>
+                                    <div class="menu-item-description">Ravioles de pollo, verdura, ricotta o pollo y verdura con salsa fileto</div>
+                                    <div class="menu-item-price">$9000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="10" data-price="12000" data-name="TALLARINES CON ESTOFADO">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">TALLARINES CON ESTOFADO</div>
+                                    <div class="menu-item-description">Tallarines caseros con salsa de estofado</div>
+                                    <div class="menu-item-price">$12000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="11" data-price="14000" data-name="ÑOQUIS CON SALSA ESPECIAL">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">ÑOQUIS CON SALSA ESPECIAL</div>
+                                    <div class="menu-item-description">Ñoquis caseros con nuestra salsa especial de la casa</div>
+                                    <div class="menu-item-price">$14000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-category">
+                        <h4>MINUTAS</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="12" data-price="10000" data-name="MILA O SUPREMA CON GUARNICIÓN">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">MILA O SUPREMA CON GUARNICIÓN</div>
+                                    <div class="menu-item-description">Milanesa de carne o pollo con guarnición a elección</div>
+                                    <div class="menu-item-price">$10000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="13" data-price="12000" data-name="MILA O SUPREMA NAPOLITANA CON GUARNICIÓN">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">MILA O SUPREMA NAPOLITANA CON GUARNICIÓN</div>
+                                    <div class="menu-item-description">Milanesa de carne o pollo napolitana con guarnición a elección</div>
+                                    <div class="menu-item-price">$12000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-category">
+                        <h4>PIZZAS Y EMPANADAS</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="14" data-price="9000" data-name="PIZZA MUZZA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">PIZZA MUZZA</div>
+                                    <div class="menu-item-description">Pizza con salsa de tomate y queso mozzarella</div>
+                                    <div class="menu-item-price">$9000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="15" data-price="12000" data-name="PIZZA JAMÓN">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">PIZZA JAMÓN</div>
+                                    <div class="menu-item-description">Pizza con salsa de tomate, mozzarella y jamón</div>
+                                    <div class="menu-item-price">$12000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="16" data-price="1500" data-name="EMPANADA UNIDAD">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">EMPANADA (UNIDAD)</div>
+                                    <div class="menu-item-description">Empanada de carne, pollo o jamón y queso</div>
+                                    <div class="menu-item-price">$1500</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="17" data-price="8000" data-name="EMPANADAS 1/2 DOCENA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">EMPANADAS (1/2 DOCENA)</div>
+                                    <div class="menu-item-description">Media docena de empanadas de carne, pollo o jamón y queso</div>
+                                    <div class="menu-item-price">$8000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-category">
+                        <h4>BEBIDAS</h4>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="18" data-price="3500" data-name="AGUA MINERAL">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">AGUA MINERAL</div>
+                                    <div class="menu-item-description">Agua mineral 500ml</div>
+                                    <div class="menu-item-price">$3500</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="19" data-price="4000" data-name="GASEOSA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">GASEOSA</div>
+                                    <div class="menu-item-description">Coca-Cola, Sprite, Fanta (500ml)</div>
+                                    <div class="menu-item-price">$4000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item" data-id="20" data-price="6000" data-name="CERVEZA">
+                                <div class="menu-item-info">
+                                    <div class="menu-item-name">CERVEZA</div>
+                                    <div class="menu-item-description">Cerveza rubia o negra (1L)</div>
+                                    <div class="menu-item-price">$6000</div>
+                                </div>
+                                <div class="quantity-control">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-section">
+                <h3>Información de Contacto</h3>
+                <div class="contact-info">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Dirección de entrega</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Notas adicionales</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-section">
+                <h3>Resumen del Pedido</h3>
+                <div id="order-summary">
+                    <div class="no-items-message">Aún no has seleccionado productos</div>
+                    <div class="order-items-container" style="display: none;">
+                        <ul id="order-items-list">
+                            <!-- Los ítems seleccionados aparecerán aquí -->
+                        </ul>
+                    </div>
+                    <div class="order-total">
+                        <span>Total:</span>
+                        <span id="total-amount">$0</span>
+                    </div>
+                </div>
+                
+                <div class="payment-options">
+                    <h4>Método de pago</h4>
+                    <div class="form-group">
+                        <input type="radio" id="efectivo" name="payment" value="efectivo" checked>
+                        <label for="efectivo">Efectivo</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="radio" id="tarjeta" name="payment" value="tarjeta">
+                        <label for="tarjeta">Pago con tarjeta al recibir</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="radio" id="transferencia" name="payment" value="transferencia">
+                        <label for="transferencia">Transferencia bancaria</label>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submit-order" class="btn">Realizar Pedido</button>
+            </div>
         </form>
-    </section>
+        <script>
 
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referencias a elementos del DOM
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+            const orderForm = document.getElementById('orderForm');
+            const orderItemsList = document.getElementById('order-items-list');
+            const totalAmount = document.getElementById('total-amount');
+            const noItemsMessage = document.querySelector('.no-items-message');
+            const orderItemsContainer = document.querySelector('.order-items-container');
+            
+            // Contador de pedido
+            let orderTotal = 0;
+            
+            // Evento para los botones de cantidad
+            quantityBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const quantityControl = this.parentElement;
+                    const input = quantityControl.querySelector('.quantity-input');
+                    let value = parseInt(input.value);
+                    
+                    if (this.classList.contains('plus') && value < 10) {
+                        input.value = value + 1;
+                    } else if (this.classList.contains('minus') && value > 0) {
+                        input.value = value - 1;
+                    }
+                    
+                    updateOrderSummary();
+                });
+            });
+            
+            // Función para actualizar el resumen del pedido
+            function updateOrderSummary() {
+                let total = 0;
+                let itemsCount = 0;
+                
+                // Limpiar la lista actual
+                orderItemsList.innerHTML = '';
+                
+                // Recorrer todos los productos
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    const quantity = parseInt(item.querySelector('.quantity-input').value);
+                    
+                    if (quantity > 0) {
+                        itemsCount++;
+                        const itemId = item.dataset.id;
+                        const itemName = item.dataset.name;
+                        const itemPrice = parseInt(item.dataset.price);
+                        const itemTotal = itemPrice * quantity;
+                        total += itemTotal;
+                        
+                        // Crear elemento de lista para el ítem
+                        const li = document.createElement('li');
+                        li.classList.add('order-item');
+                        li.innerHTML = `
+                            <span class="item-name">${itemName}</span>
+                            <span class="item-quantity">x${quantity}</span>
+                            <span class="item-price">$${itemTotal.toLocaleString()}</span>
+                        `;
+                        orderItemsList.appendChild(li);
+                    }
+                });
+                
+                // Actualizar total
+                orderTotal = total;
+                totalAmount.textContent = `$${total.toLocaleString()}`;
+                
+                // Mostrar/ocultar mensajes según si hay items seleccionados
+                if (itemsCount > 0) {
+                    noItemsMessage.style.display = 'none';
+                    orderItemsContainer.style.display = 'block';
+                } else {
+                    noItemsMessage.style.display = 'block';
+                    orderItemsContainer.style.display = 'none';
+                }
+            }
+            
+            // Evento de envío del formulario
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validar que se hayan seleccionado productos
+                if (orderTotal === 0) {
+                    alert('Por favor selecciona al menos un producto para realizar tu pedido.');
+                    return;
+                }
+                
+                // Validar campos obligatorios
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const address = document.getElementById('address').value.trim();
+                
+                if (!name || !phone || !address) {
+                    alert('Por favor completa todos los campos obligatorios.');
+                    return;
+                }
+                
+                // Crear objeto con los datos del pedido
+                const order = {
+                    customer: {
+                        name: name,
+                        phone: phone,
+                        address: address,
+                        notes: document.getElementById('notes').value.trim()
+                    },
+                    items: [],
+                    total: orderTotal,
+                    paymentMethod: document.querySelector('input[name="payment"]:checked').value
+                };
+                
+                // Agregar items al pedido
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    const quantity = parseInt(item.querySelector('.quantity-input').value);
+                    if (quantity > 0) {
+                        order.items.push({
+                            id: item.dataset.id,
+                            name: item.dataset.name,
+                            price: parseInt(item.dataset.price),
+                            quantity: quantity
+                        });
+                    }
+                });
+                
+                // Aquí se puede enviar el pedido a un servidor
+                console.log('Pedido enviado:', order);
+                alert('¡Gracias por tu pedido! Te contactaremos pronto para confirmar.');
+                
+                // Reset del formulario
+                orderForm.reset();
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.value = 0;
+                });
+                updateOrderSummary();
+            });
+        });
+    </script>
 </body>
 </html>
+

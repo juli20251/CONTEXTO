@@ -1,50 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VIVI Y LOLO - Contacto</title>
     <link rel="stylesheet" href="contacto.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">VIVI Y LOLO</div>
         <div class="nav-links">
             <a href="index.html">INICIO</a>
-            <a href="menu.html">MENÚ </a>
+            <a href="menu.html">MENÚ</a>
             <a href="historia.html">NUESTRA HISTORIA</a>
             <a href="sucursales.html">SUCURSALES</a>
-            <a href="contacto.html">CONTACTO</a>
+            <a href="contacto.html" class="active">CONTACTO</a>
             <a href="cvv.html">TRABAJA CON NOSOTROS</a>
             <a href="pedidos.html">PEDIDOS ONLINE</a>
         </div>
     </nav>
 
-    <header>
+    <div class="hero contacto-hero">
         <h1>Contacto</h1>
-    </header>
+        <p>Estamos para escucharte</p>
+    </div>
     
-    <section>
-        <h2>¡Estamos aquí para ayudarte!</h2>
-        <p>Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros. Completa el formulario y nos pondremos en contacto lo antes posible.</p>
+    <div class="contenedor">
+        <div class="formulario-contacto">
+            <div class="info-contacto">
+                <h2>¡Estamos aquí para ayudarte!</h2>
+                <p>Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros. Completa el formulario y nos pondremos en contacto lo antes posible.</p>
+                
+                <div class="contacto-detalles">
+                    <div class="detalle">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Av. Principal 123, Ciudad</p>
+                    </div>
+                    <div class="detalle">
+                        <i class="fas fa-phone"></i>
+                        <p>+54 11 1234-5678</p>
+                    </div>
+                    <div class="detalle">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@viviylolo.com</p>
+                    </div>
+                    <div class="detalle">
+                        <i class="fas fa-clock"></i>
+                        <p>Lun-Dom: 8:00 - 22:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="formulario-contacto" class="contacto-form">
+                <div class="mensaje-exito" id="mensaje-exito">
+                    ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error-mensaje" id="nombre-error"></span>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-mensaje" id="email-error"></span>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="telefono">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="dia">Día de visita</label>
+                    <input type="date" id="dia" name="dia" required>
+                    <span class="error-mensaje" id="dia-error"></span>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="consulta">Consulta general</option>
+                        <option value="reserva">Reservas</option>
+                        <option value="evento">Eventos privados</option>
+                        <option value="sugerencia">Sugerencias</option>
+                        <option value="reclamo">Reclamo</option>
+                    </select>
+                    <span class="error-mensaje" id="asunto-error"></span>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <span class="error-mensaje" id="mensaje-error"></span>
+                </div>
+                
+                <div class="form-grupo">
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos y condiciones</label>
+                    </div>
+                    <span class="error-mensaje" id="terminos-error"></span>
+                </div>
+                
+                <button type="submit" class="boton-enviar">
+                    <span>Enviar mensaje</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
     
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    <div class="mapa-completo">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.866569084486!2d-58.38378915!3d-34.60373275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjQiUyA1OMKwMjMnMDEuNiJX!5e0!3m2!1ses!2sar!4v1651234567890!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
     
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">VIVI Y LOLO</div>
+            <div class="footer-redes">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2025 VIVI Y LOLO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-            <label for="dia">Dia asistido:</label>
-            <input type="dia" id="dia" name="dia" required>
-    
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formulario = document.getElementById('formulario-contacto');
+            const mensajeExito = document.getElementById('mensaje-exito');
+            
+            // Función para validar el formulario
+            function validarFormulario(e) {
+                e.preventDefault();
+                
+                let esValido = true;
+                
+                // Validar nombre
+                const nombre = document.getElementById('nombre');
+                const nombreError = document.getElementById('nombre-error');
+                if (nombre.value.trim() === '') {
+                    nombreError.textContent = 'Por favor, ingresa tu nombre';
+                    esValido = false;
+                } else if (nombre.value.trim().length < 3) {
+                    nombreError.textContent = 'El nombre debe tener al menos 3 caracteres';
+                    esValido = false;
+                } else {
+                    nombreError.textContent = '';
+                }
+                
+                // Validar email
+                const email = document.getElementById('email');
+                const emailError = document.getElementById('email-error');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email.value.trim() === '') {
+                    emailError.textContent = 'Por favor, ingresa tu correo electrónico';
+                    esValido = false;
+                } else if (!emailRegex.test(email.value.trim())) {
+                    emailError.textContent = 'Por favor, ingresa un correo electrónico válido';
+                    esValido = false;
+                } else {
+                    emailError.textContent = '';
+                }
+                
+                // Validar día
+                const dia = document.getElementById('dia');
+                const diaError = document.getElementById('dia-error');
+                if (dia.value === '') {
+                    diaError.textContent = 'Por favor, selecciona el día de tu visita';
+                    esValido = false;
+                } else {
+                    diaError.textContent = '';
+                }
+                
+                // Validar asunto
+                const asunto = document.getElementById('asunto');
+                const asuntoError = document.getElementById('asunto-error');
+                if (asunto.value === '') {
+                    asuntoError.textContent = 'Por favor, selecciona un asunto';
+                    esValido = false;
+                } else {
+                    asuntoError.textContent = '';
+                }
+                
+                // Validar mensaje
+                const mensaje = document.getElementById('mensaje');
+                const mensajeError = document.getElementById('mensaje-error');
+                if (mensaje.value.trim() === '') {
+                    mensajeError.textContent = 'Por favor, ingresa tu mensaje';
+                    esValido = false;
+                } else if (mensaje.value.trim().length < 10) {
+                    mensajeError.textContent = 'El mensaje debe tener al menos 10 caracteres';
+                    esValido = false;
+                } else {
+                    mensajeError.textContent = '';
+                }
+                
+                // Validar términos
+                const terminos = document.getElementById('terminos');
+                const terminosError = document.getElementById('terminos-error');
+                if (!terminos.checked) {
+                    terminosError.textContent = 'Debes aceptar los términos y condiciones';
+                    esValido = false;
+                } else {
+                    terminosError.textContent = '';
+                }
+                
+                // Si todo es válido, enviar el formulario
+                if (esValido) {
+                    // Simulación de envío de formulario
+                    setTimeout(function() {
+                        formulario.reset();
+                        mensajeExito.style.display = 'block';
+                        
+                        // Ocultar el mensaje después de 5 segundos
+                        setTimeout(function() {
+                            mensajeExito.style.display = 'none';
+                        }, 5000);
+                    }, 1000);
+                }
+            }
+            
+            // Agregar evento al formulario
+            formulario.addEventListener('submit', validarFormulario);
+        });
+    </script>
 </body>
 </html>

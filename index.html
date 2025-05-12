@@ -5,84 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LO DE VIVI Y LOLO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">VIVI Y LOLO</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> INICIO</a>
+                <a href="menu.html"><i class="fas fa-utensils"></i> MENÚ</a>
+                <a href="historia.html"><i class="fas fa-book"></i> NUESTRA HISTORIA</a>
+                <a href="sucursales.html"><i class="fas fa-map-marker-alt"></i> SUCURSALES</a>
+                <a href="contacto.html"><i class="fas fa-envelope"></i> CONTACTO</a>
+                <a href="cvv.html"><i class="fas fa-briefcase"></i> TRABAJA CON NOSOTROS</a>
+                <a href="pedidos.html" class="pedidos-btn"><i class="fas fa-shopping-cart"></i> PEDIDOS ONLINE</a>
+            </div>
+        </nav>
+    </header>
 
-    
-    <nav class="navbar">
-        <div class="logo">VIVI Y LOLO</div>
-        <div class="nav-links">
-            <a href="index.html">INICIO</a>
-            <a href="menu.html">MENÚ </a>
-            <a href="historia.html">NUESTRA HISTORIA</a>
-            <a href="sucursales.html">SUCURSALES</a>
-            <a href="contacto.html">CONTACTO</a>
-            <a href="cvv.html">TRABAJA CON NOSOTROS</a>
-            <a href="pedidos.html">PEDIDOS ONLINE</a>
-        </div>
-    </nav>
-
-    <section class="section">
-
-        <H1>LO DE VIVI Y LOLO</H1>
-        <img src="fotos/images.jfif">
-        <p>TU LUGAR PARA DISFRUTAR EN TORTUGUITAS!</p>
-
-
-        <h2>¿Quiénes somos?</h2>
-        <p>Vivi y Lolo empezó cuando una chef con alma italiana y un músico con corazón de barrio se cruzaron en una feria de comida. De esa mezcla nació un restaurante donde cada plato tiene historia y cada cliente es parte de la familia. Cocinamos con amor, servimos con alegría y abrimos nuestras puertas para que te sientas como en casa.</p>
-    </section>
-
-    <section class="section">
-        <h2>Ubicación</h2>
-        <p>Nos encontramos en:</p>
-        <p><strong>Tucumán 359, B1667DMG Tortuguitas, Provincia de Buenos Aires</strong></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!4v1744673959062!6m8!1m7!1sDR0_eDSoo8NInABM8V3H7w!2m2!1d-34.46945034679239!2d-58.76656878571381!3f39.06!4f2.989999999999995!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
-
-        <h2>Horarios</h2>
-        <ul>
-            <li><b>LUNES Y MARTES</b> CERRADO</li>
-            <li><b>DE MIÉRCOLES A SÁBADO</b> 10:00 AM A 3:30 PM - 7:30 PM A 11:30 PM</li>
-            <li><b>DOMINGOS</b>: 7:00 AM A 11:30 PM</li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2>Platos destacados</h2>
-        <div class="comidas">
-            <img src="fotos/comida1.jfif" style="width: 40%; height: auto; max-width: 600px;">
-            <img src="fotos/comida2.jpg" style="width: 40%; height: auto; max-width: 600px;">
-            <img src="fotos/comida3.jfif" style="width: 60%; height: auto; max-width: 600px;">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>LO DE VIVI Y LOLO</h1>
+            <p class="tagline">TU LUGAR PARA DISFRUTAR EN TORTUGUITAS!</p>
+            <a href="menu.html" class="cta-button">VER NUESTRO MENÚ</a>
         </div>
     </section>
+
+    <section class="section about-section">
+        <div class="container">
+            <h2><i class="fas fa-users"></i> ¿Quiénes somos?</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="fotos/images.jfif" alt="Lo de Vivi y Lolo">
+                </div>
+                <div class="about-text">
+                    <p>Vivi y Lolo empezó cuando una chef con alma italiana y un músico con corazón de barrio se cruzaron en una feria de comida. De esa mezcla nació un restaurante donde cada plato tiene historia y cada cliente es parte de la familia. Cocinamos con amor, servimos con alegría y abrimos nuestras puertas para que te sientas como en casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section location-section">
+        <div class="container">
+            <h2><i class="fas fa-map-pin"></i> Ubicación</h2>
+            <p>Nos encontramos en:</p>
+            <p class="address"><strong>Tucumán 359, B1667DMG Tortuguitas, Provincia de Buenos Aires</strong></p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1744673959062!6m8!1m7!1sDR0_eDSoo8NInABM8V3H7w!2m2!1d-34.46945034679239!2d-58.76656878571381!3f39.06!4f2.989999999999995!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="hours-container">
+                <h2><i class="far fa-clock"></i> Horarios</h2>
+                <ul class="hours-list">
+                    <li><span class="day">LUNES Y MARTES</span> <span class="hours">CERRADO</span></li>
+                    <li><span class="day">DE MIÉRCOLES A SÁBADO</span> <span class="hours">10:00 AM A 3:30 PM - 7:30 PM A 11:30 PM</span></li>
+                    <li><span class="day">DOMINGOS</span> <span class="hours">7:00 AM A 11:30 PM</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section featured-dishes">
+        <div class="container">
+            <h2><i class="fas fa-star"></i> Platos destacados</h2>
+            <div class="dishes-gallery">
+                <div class="dish-item">
+                    <img src="fotos/comida1.jfif" alt="Plato destacado 1">
+                    <div class="dish-overlay">
+                        <p>Especialidad de la casa</p>
+                    </div>
+                </div>
+                <div class="dish-item">
+                    <img src="fotos/comida2.jpg" alt="Plato destacado 2">
+                    <div class="dish-overlay">
+                        <p>Sabores únicos</p>
+                    </div>
+                </div>
+                <div class="dish-item">
+                    <img src="fotos/comida3.jfif" alt="Plato destacado 3">
+                    <div class="dish-overlay">
+                        <p>Cocina artesanal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <section class="section">
-        <h2>Galería del lugar</h2>
-        <div class="galeria">
-            <img src="fotos/foto1.jpg" style="width: 30%; height: auto; max-width: 600px;">
-            <img src="fotos/foto2.jpg" style="width: 30%; height: auto; max-width: 600px;">
-            <img src="fotos/foto3.jfif" style="width: 50%; height: auto; max-width: 600px;">
+    <section class="section gallery-section">
+        <div class="container">
+            <h2><i class="fas fa-camera"></i> Galería del lugar</h2>
+            <div class="place-gallery">
+                <div class="gallery-item">
+                    <img src="fotos/foto1.jpg" alt="Nuestro local 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/foto2.jpg" alt="Nuestro local 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/foto3.jfif" alt="Nuestro local 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2><i class="fas fa-comment"></i> Lo que dicen nuestros clientes</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"La mejor pasta casera que he probado en años. El ambiente familiar hace que quieras volver una y otra vez."</p>
+                    <p class="client-name">- María González</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Un rincón con sabor a hogar en Tortuguitas. Los domingos en familia son perfectos aquí."</p>
+                    <p class="client-name">- Carlos Rodríguez</p>
+                </div>
+                <div class="testimonial">
+                    <p>"La atención de Vivi y Lolo es incomparable. Te hacen sentir parte de su familia desde el primer momento."</p>
+                    <p class="client-name">- Laura Pérez</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="suscripcion">
-        <h2>Suscríbete a Vivi y Lolo</h2>
-        <p>Mantente al día con todo lo importante.</p>
-        <form action="#" method="post">
-          <input type="email" placeholder="Email" required>
-          <button type="submit">SUSCRIBIR</button>
-        </form>
-      </section>
-
-      <footer class="footer">
-        <div class="footer-content">
-          <p>&copy; 2025 Vivi y Lolo. Todos los derechos reservados.</p>
-          <p>Hecho con ❤️ en Tortuguitas.</p>
-          <div class="redes">
-            <a href="https://www.instagram.com/lodeviviylolo/?hl=es" target="_blank">Instagram</a> |
-            <a href="https://www.facebook.com/lodeviviylolo/?locale=es_LA" target="_blank">Facebook</a> 
-          </div>
+        <div class="container">
+            <h2><i class="far fa-envelope"></i> Suscríbete a Vivi y Lolo</h2>
+            <p>Mantente al día con nuestras novedades, eventos y promociones especiales.</p>
+            <form action="#" method="post" class="subscription-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">SUSCRIBIR</button>
+                </div>
+            </form>
         </div>
-      </footer>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">VIVI Y LOLO</div>
+                    <p>Cocina con historia, sabor de hogar</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Tucumán 359, Tortuguitas</p>
+                    <p><i class="fas fa-phone"></i> (11) 4555-5555</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lodeviviylolo/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/lodeviviylolo/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vivi y Lolo. Todos los derechos reservados.</p>
+                <p>Hecho con <i class="fas fa-heart"></i> en Tortuguitas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for testimonial rotation
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.style.opacity = '1';
+                    testimonial.style.transform = 'translateX(0)';
+                } else {
+                    testimonial.style.opacity = '0';
+                    testimonial.style.transform = 'translateX(100px)';
+                }
+            });
+        }
+
+        // Show first testimonial
+        showTestimonial(0);
+
+        // Rotate testimonials every 5 seconds
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+    </script>
 </body>
 </html>

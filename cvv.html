@@ -1,50 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trabaja con Nosotros - VIVI Y LOLO</title>
     <link rel="stylesheet" href="cvv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">VIVI Y LOLO</div>
         <div class="nav-links">
             <a href="index.html">INICIO</a>
-            <a href="menu.html">MENÚ </a>
+            <a href="menu.html">MENÚ</a>
             <a href="historia.html">NUESTRA HISTORIA</a>
             <a href="sucursales.html">SUCURSALES</a>
             <a href="contacto.html">CONTACTO</a>
-            <a href="cvv.html">TRABAJA CON NOSOTROS</a>
+            <a href="cvv.html" class="active">TRABAJA CON NOSOTROS</a>
             <a href="pedidos.html">PEDIDOS ONLINE</a>
         </div>
     </nav>
-
-
+    
     <header>
         <h1>Trabaja con Nosotros</h1>
     </header>
     
     <section>
         <h2>Únete a nuestro equipo</h2>
-        <p>Si estás buscando nuevas oportunidades laborales y quieres formar parte de nuestro equipo, completa el siguiente formulario. Nos encantaría conocerte.</p>
-    
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
+        <p>Si estás buscando nuevas oportunidades laborales y quieres formar parte de nuestra familia VIVI Y LOLO, completa el siguiente formulario. Valoramos el talento, la pasión y el compromiso con la excelencia. ¡Nos encantaría conocerte!</p>
+        
+        <form id="job-application-form" action="#" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre completo:</label>
             <input type="text" id="nombre" name="nombre" required>
-    
+            <div class="validation-message">Ingresa tu nombre completo</div>
+            
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
-    
+            <div class="validation-message">Ingresa un correo electrónico válido</div>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 11 1234 5678">
+            
+            <label for="puesto">Puesto al que aspiras:</label>
+            <select id="puesto" name="puesto">
+                <option value="">Selecciona una opción</option>
+                <option value="cocina">Cocina</option>
+                <option value="atencion">Atención al cliente</option>
+                <option value="delivery">Delivery</option>
+                <option value="administrativo">Administrativo</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="experiencia">Experiencia previa:</label>
+            <select id="experiencia" name="experiencia">
+                <option value="">Selecciona una opción</option>
+                <option value="sin_experiencia">Sin experiencia</option>
+                <option value="menos_1">Menos de 1 año</option>
+                <option value="1_3">1-3 años</option>
+                <option value="mas_3">Más de 3 años</option>
+            </select>
+            
             <label for="mensaje">¿Por qué quieres trabajar con nosotros?</label>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
-            <label for="cv">Sube tu CV:</label>
+            <div class="validation-message">Por favor cuéntanos por qué quieres trabajar con nosotros</div>
+            
+            <label for="cv">Sube tu CV (PDF, DOC o DOCX):</label>
             <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-    
-            <button type="submit">Enviar</button>
+            <div class="validation-message">Por favor sube tu CV en formato PDF, DOC o DOCX</div>
+            
+            <div class="form-terms">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos" class="checkbox-label">Acepto los términos y condiciones y autorizo el tratamiento de mis datos personales</label>
+            </div>
+            
+            <button type="submit">Enviar Solicitud</button>
         </form>
+        
+        <div id="form-success" class="form-success">
+            <h3>¡Gracias por tu interés en formar parte de VIVI Y LOLO!</h3>
+            <p>Hemos recibido tu solicitud correctamente. Nuestro equipo de recursos humanos revisará tu CV y se pondrá en contacto contigo en los próximos días.</p>
+        </div>
     </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">VIVI Y LOLO</div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+                <a href="historia.html">Nuestra Historia</a>
+                <a href="sucursales.html">Sucursales</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="cvv.html">Trabaja con Nosotros</a>
+                <a href="pedidos.html">Pedidos Online</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">IG</a>
+                <a href="#" class="social-icon">TW</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 VIVI Y LOLO. Todos los derechos reservados.
+        </div>
+    </footer>
+    
+    <script src="cvv.js"></script>
 </body>
 </html>

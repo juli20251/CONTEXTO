@@ -1,97 +1,579 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú - Lo de Vivi y Lolo</title>
-  <link rel="stylesheet" href="menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - LO DE VIVI Y LOLO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">VIVI Y LOLO</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> INICIO</a>
+                <a href="menu.html" class="active"><i class="fas fa-utensils"></i> MENÚ</a>
+                <a href="historia.html"><i class="fas fa-book"></i> NUESTRA HISTORIA</a>
+                <a href="sucursales.html"><i class="fas fa-map-marker-alt"></i> SUCURSALES</a>
+                <a href="contacto.html"><i class="fas fa-envelope"></i> CONTACTO</a>
+                <a href="cvv.html"><i class="fas fa-briefcase"></i> TRABAJA CON NOSOTROS</a>
+                <a href="pedidos.html" class="pedidos-btn"><i class="fas fa-shopping-cart"></i> PEDIDOS ONLINE</a>
+            </div>
+        </nav>
+    </header>
 
-  <nav class="navbar">
-    <div class="logo">VIVI Y LOLO</div>
-    <div class="nav-links">
-        <a href="index.html">INICIO</a>
-        <a href="menu.html">MENÚ </a>
-        <a href="historia.html">NUESTRA HISTORIA</a>
-        <a href="sucursales.html">SUCURSALES</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="cvv.html">TRABAJA CON NOSOTROS</a>
-        <a href="pedidos.html">PEDIDOS ONLINE</a>
-    </div>
-</nav>
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h1>NUESTRA CARTA</h1>
+            <p>Sabores auténticos y comida casera</p>
+        </div>
+    </section>
 
-
-  <header class="header">
-    <h1>Menú de Vivi y Lolo</h1>
-    <p>Comida casera, sabores auténticos</p>
-  </header>
-
-  <section class="menu">
-    <div class="categoria">
-      <h2>Entradas</h2>
-      <div class="item">
-        <h3>Bruschettas</h3>
-        <p>Pan artesanal con tomate, ajo, albahaca y aceite de oliva.</p>
-        <span>$1500</span>
-      </div>
-      <div class="item">
-        <h3>Empanadas caseras (x3)</h3>
-        <p>De carne, jamón y queso o humita.</p>
-        <span>$1800</span>
-      </div>
-    </div>
-
-    <div class="categoria">
-      <h2>Platos principales</h2>
-      <div class="item">
-        <h3>Ravioles de ricota y nuez</h3>
-        <p>Con salsa de tu elección: bolognesa, fileto o crema.</p>
-        <span>$3500</span>
-      </div>
-      <div class="item">
-        <h3>Milanesa napolitana</h3>
-        <p>Con papas fritas caseras.</p>
-        <span>$3900</span>
-      </div>
-      <div class="item">
-        <h3>plato de ñoquis </h3>
-        <p>con salsa boloñesa y queso rallado</p>
-        <span>$3500</span>
+    <div class="menu-navigation">
+        <div class="container">
+            <ul>
+                <li><a href="#entradas">Entradas</a></li>
+                <li><a href="#parrilla">Parrilla</a></li>
+                <li><a href="#sugerencias">Sugerencias</a></li>
+                <li><a href="#sandwiches">Sandwiches</a></li>
+                <li><a href="#pastas">Pastas</a></li>
+                <li><a href="#vegetariano">Vegetariano</a></li>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#platos">Platos Elaborados</a></li>
+                <li><a href="#minutas">Minutas</a></li>
+                <li><a href="#guarniciones">Guarniciones</a></li>
+                <li><a href="#postres">Postres</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="categoria">
-      <h2>Postres</h2>
-      <div class="item">
-        <h3>Tiramisú</h3>
-        <p>Clásico postre italiano con café y mascarpone.</p>
-        <span>$1800</span>
-      </div>
-      <div class="item">
-        <h3>Flan casero</h3>
-        <p>Con dulce de leche o crema.</p>
-        <span>$1500</span>
-      </div>
-    </div>
+    <section class="menu-content">
+        <div class="container">
+            <div class="menu-category" id="entradas">
+                <div class="category-header">
+                    <i class="fas fa-cheese"></i>
+                    <h2>ENTRADAS</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">PROVOLETA</div>
+                        <div class="item-price">$14000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BASTONES DE MUZZA</div>
+                        <div class="item-price">$8000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RABAS</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RABAS CON PROVENZAL</div>
+                        <div class="item-price">$16000</div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="categoria">
-      <h2>Bebidas</h2>
-      <div class="item">
-        <h3>Gaseosas</h3>
-        <p>Coca, Sprite, Fanta (500ml).</p>
-        <span>$1000</span>
-      </div>
-      <div class="item">
-        <h3>Limonada casera</h3>
-        <p>Con menta y jengibre.</p>
-        <span>$1200</span>
-      </div>
-    </div>
-  </section>
+            <div class="menu-category" id="parrilla">
+                <div class="category-header">
+                    <i class="fas fa-fire"></i>
+                    <h2>PARRILLA</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">PARRILLADA COMÚN<br><small>(CHORI, MORCI, CHINCHU, RIÑÓN Y ASADO)</small></div>
+                        <div class="item-price">$23000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PARRILLADA ESPECIAL<br><small>(CHORI, MORCI, CHINCHU, RIÑÓN, ASADO, PECHITO Y POLLO)</small></div>
+                        <div class="item-price">$26000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">POLLO ENTERO</div>
+                        <div class="item-price">$18000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">POLLO ENTERO CON FRITAS</div>
+                        <div class="item-price">$20000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">½ POLLO</div>
+                        <div class="item-price">$13000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">¼ POLLO</div>
+                        <div class="item-price">$8000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">¼ POLLO CON GUARNICIÓN</div>
+                        <div class="item-price">$9000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PORCIÓN CHINCHU O RIÑÓN</div>
+                        <div class="item-price">$10000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHORIZO O MORCILLA (por unidad)</div>
+                        <div class="item-price">$3000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ASADO, VACÍO O PECHITO (EL KG)</div>
+                        <div class="item-price">$25000</div>
+                    </div>
+                </div>
+            </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Vivi y Lolo. Todos los derechos reservados.</p>
-  </footer>
+            <div class="menu-category" id="sugerencias">
+                <div class="category-header">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h2>SUGERENCIAS</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">BIFE DE CHORIZO CON GUARNICIÓN</div>
+                        <div class="item-price">$16000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BIFE MEDITERRÁNEO O SALSEADO CON GUARNICIÓN</div>
+                        <div class="item-price">$18000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">TORTILLA DE PAPAS</div>
+                        <div class="item-price">$10000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">TORTILLA DE PAPAS CON CEBOLLA</div>
+                        <div class="item-price">$11000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">LOMO GRILLE CON GUARNICIÓN</div>
+                        <div class="item-price">$16000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">LOMO MEDITERRÁNEO O SALSEADO CON GUARNICIÓN</div>
+                        <div class="item-price">$18000</div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="menu-category" id="sandwiches">
+                <div class="category-header">
+                    <i class="fas fa-hamburger"></i>
+                    <h2>SANDWICHES</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">SANDWICH DE MILA O SUPREMA CON LECHUGA Y TOMATE</div>
+                        <div class="item-price">$7000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COMPLETO</div>
+                        <div class="item-price">$8000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">HAMBURGUESA CON LECHUGA Y TOMATE</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COMPLETA</div>
+                        <div class="item-price">$7000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">SANDWICH DE VACÍO O POLLO</div>
+                        <div class="item-price">$10000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHORIPAN O MORCIPAN</div>
+                        <div class="item-price">$4000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="pastas">
+                <div class="category-header">
+                    <i class="fas fa-utensils"></i>
+                    <h2>PASTAS</h2>
+                </div>
+                <div class="pasta-info">
+                    <div class="pasta-types">
+                        <h3>VARIEDADES</h3>
+                        <ul>
+                            <li>RAVIOLES (pollo, verdura, ricotta o pollo y verdura)</li>
+                            <li>TALLARINES</li>
+                            <li>ÑOQUIS</li>
+                            <li>SORRENTINOS</li>
+                            <li>CANELONES</li>
+                        </ul>
+                    </div>
+                    <div class="pasta-sauces">
+                        <h3>SALSAS ESPECIALES</h3>
+                        <p>Crema, blanca, rosa, mixta, 4 quesos, parisiense, scarparo, champiñones, principe, putanesca, verdeo, portuguesa</p>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">CON FILETO</div>
+                        <div class="item-price">$9000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON ESTOFADO O BOLOÑESA</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON SALSA ESPECIAL</div>
+                        <div class="item-price">$14000</div>
+                    </div>
+                </div>
+                <div class="menu-subheader">
+                    <h3>LASAÑA</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">CON FILETO</div>
+                        <div class="item-price">$13000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON ESTOFADO O BOLONESA</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON SALSA ESPECIAL</div>
+                        <div class="item-price">$17000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="vegetariano">
+                <div class="category-header">
+                    <i class="fas fa-leaf"></i>
+                    <h2>MENÚ VEGETARIANO</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">CHOW FAN, CHOW MIEN, CHOW SUEY O RISOTTO</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">OPCIONAL CON POLLO</div>
+                        <div class="item-price">$13000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MILA BERENJENA CON GUARNICIÓN</div>
+                        <div class="item-price">$10000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MILA BERENJENA NAPO CON GUARNICIÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="pizzas">
+                <div class="category-header">
+                    <i class="fas fa-pizza-slice"></i>
+                    <h2>PIZZAS Y EMPANADAS</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">MUZZA</div>
+                        <div class="item-price">$9000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">JAMÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">HUEVO</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">NAPOLITANA</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">FUGAZZETA</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">JAMÓN Y MORRONES</div>
+                        <div class="item-price">$13000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PRIMAVERA</div>
+                        <div class="item-price">$14000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ANCHOAS</div>
+                        <div class="item-price">$14000</div>
+                    </div>
+                </div>
+                <div class="menu-subheader">
+                    <h3>EMPANADAS (carne, pollo o jamón y queso)</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">CADA UNA</div>
+                        <div class="item-price">$1500</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">½ DOCENA</div>
+                        <div class="item-price">$8000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">DOCENA</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="platos">
+                <div class="category-header">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h2>PLATOS ELABORADOS</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">PECHUGA GRILLÉ CON GUARNICIÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PECHUGA SALSEADA CON GUARNICIÓN</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">SUPREMA RELLENA CON GUARNICIÓN</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COSTILLITAS A LA RIOJANA</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                </div>
+                <div class="menu-subheader">
+                    <h3>PESCADOS Y MARISCOS</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">FILET A LA ROMANA CON GUARNICIÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">FILET AL PLOMO O NAPOLITANO</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">FILET SALSEADO CON GUARNICIÓN</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">SALMON GRILLÉ CON GUARNICIÓN</div>
+                        <div class="item-price">$24000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">SALMON SALSEADO CON GUARNICIÓN</div>
+                        <div class="item-price">$25000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CAZUELA, PAELLA O PASTAS CON MARISCOS</div>
+                        <div class="item-price">$24000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RABAS</div>
+                        <div class="item-price">$15000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RABAS CON PROVENZAL</div>
+                        <div class="item-price">$16000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="minutas">
+                <div class="category-header">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h2>MINUTAS</h2>
+                </div>
+                <div class="menu-subheader">
+                    <h3>MILA O SUPREMA</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">SIN GUARNICIÓN</div>
+                        <div class="item-price">$9000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON GUARNICIÓN</div>
+                        <div class="item-price">$10000</div>
+                    </div>
+                </div>
+                <div class="menu-subheader">
+                    <h3>MILA O SUPREMA NAPOLITANA</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">SIN GUARNICIÓN</div>
+                        <div class="item-price">$11000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON GUARNICIÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                </div>
+                <div class="menu-subheader">
+                    <h3>MILA O SUPREMA A CABALLO</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">SIN GUARNICIÓN</div>
+                        <div class="item-price">$11000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON GUARNICIÓN</div>
+                        <div class="item-price">$12000</div>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">MATAMBRE A LA PIZZA CON GUARNICIÓN</div>
+                        <div class="item-price">$14000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="guarniciones">
+                <div class="category-header">
+                    <i class="fas fa-carrot"></i>
+                    <h2>GUARNICIONES POR PORCIÓN</h2>
+                </div>
+                <div class="menu-subheader">
+                    <h3>(para dos personas aproximadamente)</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">FRITAS</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ENSALADA DE DOS GUSTOS</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ENSALADA COMPLETA</div>
+                        <div class="item-price">$7000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RUSA</div>
+                        <div class="item-price">$7000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PAPAS AL HORNO</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ESPAÑOLAS</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PURÉ DE PAPAS</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PURÉ DE CALABAZA</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">PURÉ MIXTO</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="postres">
+                <div class="category-header">
+                    <i class="fas fa-ice-cream"></i>
+                    <h2>POSTRES</h2>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">FLAN O BUDIN DE PAN SOLO</div>
+                        <div class="item-price">$5000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CON DULCE O CREMA</div>
+                        <div class="item-price">$5500</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MIXTO</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">TIRAMISU</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOTORTA, BROWNIE, OREO Y FRUTOS ROJOS</div>
+                        <div class="item-price">$6000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-cta">
+        <div class="container">
+            <h2>¿Tienes hambre?</h2>
+            <p>¡Haz tu pedido ahora mismo y disfruta de nuestra deliciosa comida!</p>
+            <a href="pedidos.html" class="cta-button">HACER PEDIDO ONLINE</a>
+            <p class="phone-order"><i class="fas fa-phone"></i> O llámanos: (11) 4555-5555</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">VIVI Y LOLO</div>
+                    <p>Cocina con historia, sabor de hogar</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Tucumán 359, Tortuguitas</p>
+                    <p><i class="fas fa-phone"></i> (11) 4555-5555</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lodeviviylolo/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/lodeviviylolo/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vivi y Lolo. Todos los derechos reservados.</p>
+                <p>Hecho con <i class="fas fa-heart"></i> en Tortuguitas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para hacer el menú de navegación sticky al hacer scroll
+        window.addEventListener('scroll', function() {
+            const menuNav = document.querySelector('.menu-navigation');
+            if (menuNav) {
+                if (window.scrollY > 300) {
+                    menuNav.classList.add('sticky');
+                } else {
+                    menuNav.classList.remove('sticky');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
